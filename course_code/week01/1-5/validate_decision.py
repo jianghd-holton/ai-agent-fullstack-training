@@ -1,3 +1,6 @@
+from validationIssue import validate_decision
+
+
 samples = {
     "invalid_json": '{"action": "finish"',
     "missing_field": '{"action": "finish", "query": null}',

@@ -1,6 +1,10 @@
 from datetime import datetime, timedelta, timezone
 from hashlib import sha256
 
+from pydantic import BaseModel, Field
+
+from fieldrule import AgentDecision
+
 
 SCHEMA_VERSION = "agent-decision-v1"
 

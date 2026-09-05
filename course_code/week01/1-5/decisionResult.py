@@ -1,3 +1,10 @@
+from typing import Literal
+
+from pydantic import BaseModel
+
+from fieldrule import AgentDecision
+
+
 class DecisionResult(BaseModel):
     status: Literal["ok", "degraded", "failed"]
     source: Literal["model", "cache", "none"]

@@ -1,5 +1,7 @@
 import json
 
+from validationIssue import ValidationIssue
+
 
 def build_repair_message(
     issues: list[ValidationIssue],

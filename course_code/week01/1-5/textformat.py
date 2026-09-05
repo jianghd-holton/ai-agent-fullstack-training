@@ -1,5 +1,7 @@
 from openai import OpenAI
 
+from fieldrule import AgentDecision
+
 
 client = OpenAI()
 

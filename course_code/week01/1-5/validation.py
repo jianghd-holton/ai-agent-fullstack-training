@@ -1,5 +1,7 @@
 from pydantic import ValidationError
 
+from fieldrule import AgentDecision
+
 
 invalid_output = """
 {

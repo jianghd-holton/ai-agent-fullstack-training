@@ -42,19 +42,19 @@ class AgentDecision(BaseModel):
         return self
 
 
-AgentDecision.model_json_schema()
+if __name__ == "__main__":
+    print(AgentDecision.model_json_schema())
 
-raw_output = """
-{
-    "action": "search_docs",
-    "query": "你好",
-    "answer": null
-}
-"""
+    raw_output = """
+    {
+        "action": "search_docs",
+        "query": "你好",
+        "answer": null
+    }
+    """
 
+    decision = AgentDecision.model_validate_json(raw_output)
 
-decision = AgentDecision.model_validate_json(raw_output)
-
-print(decision.action)
-print(decision.query)
-print(decision.model_dump())
+    print(decision.action)
+    print(decision.query)
+    print(decision.model_dump())
